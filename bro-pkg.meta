@@ -1,0 +1,7 @@
+[package]
+description = An extension to the Intel Framework. This package faciliates the creation of rules which Zeek can monitor for.
+tags = intel, signature, indicators, pure-script
+version = 0.2
+script_dir = scripts
+depemds = 
+    bro >= 2.6

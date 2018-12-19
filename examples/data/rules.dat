@@ -1,0 +1,18 @@
+#fields	rid	i_condition	iids	rids	r_condition	do_rules_notice
+RID_1_T	Intel::AND	IID_5,HTTP_404	-	-	T
+RID_2_T	Intel::OR	IID_5,HTTP_404	-	-	T
+RID_3_T	Intel::NONE	HTTP_500,HTTP_302,HTTP_200	-	-	T
+RID_4_T	Intel::XOR	HTTP_200,HTTP_404	-	-	T
+RID_5_T	Intel::NONE	IID_4	-	-	T
+RID_6_T	Intel::AND	IID_6,HTTP_404	-	-	T
+RID_7_F	Intel::OR	IID_7	-	-	T
+
+RID_1_6_F	Intel::AND	IID_1,IID_6	-	-	T
+RID_6_404_T	Intel::AND	IID_6,HTTP_404	-	-	T
+RID_1_404_F	Intel::AND	IID_1,HTTP_404	-	-	T
+RID_1_6_404_F	Intel::AND	IID_1,IID_6,HTTP_404	-	-	T
+
+RID_8_T	-	-	RID_1_T,RID_7_F	Intel::OR	T
+RID_9_T	-	-	RID_1_T,RID_2_T,RID_3_T	Intel::AND	T
+RID_10_F	-	-	RID_1_T,RID_7_F	Intel::AND	T
+RID_11_T	Intel::OR	HTTP_404,HTTP_200	RID_6_T	Intel::OR	T	
